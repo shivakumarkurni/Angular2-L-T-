@@ -1,0 +1,17 @@
+<!-- <h1>{{name}}</h1>  -->
+    <ul  *ngFor="let htmls of html">
+            <li>
+                <label>
+                    <input type="checkbox" (click)="supplierData(htmls)"/>&nbsp;
+                    <span> {{htmls}}</span>
+                </label>
+            </li>
+        </ul>
+        <ul>
+            <li *ngFor="let field of fields">
+                <label> <input type="checkbox" (click)="supplierFields(field)" /> &nbsp;&nbsp;&nbsp;
+                <span>{{field}}</span> </label>
+            </li>
+        </ul>
+
+        <button type="button" class="btn btn-primary" (click)="submittingData()">Submit</button>
